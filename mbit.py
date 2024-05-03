@@ -21,7 +21,7 @@ class tools():
         return connection.readline().decode().strip()
     
     def get(self, connection: serial.Serial)->str:
-        return self.regex.findall(tools.getraw(connection))
+        return self.regex.findall(tools.get_raw(connection))
     
     def send(self, message, connection: serial.SerialBase):
         connection.writelines(message)
