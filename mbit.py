@@ -17,7 +17,7 @@ class tools():
         return (status, connection)
     
     @classmethod
-    def getraw(cls, connection: serial.Serial)->str:
+    def get_raw(cls, connection: serial.Serial)->str:
         return connection.readline().decode().strip()
     
     def get(self, connection: serial.Serial)->str:
